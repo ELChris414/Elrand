@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "elrand:blocks/red_chunk_ore"
+    }
+}

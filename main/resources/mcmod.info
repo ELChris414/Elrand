@@ -1,0 +1,16 @@
+[
+{
+  "modid": "elrand",
+  "name": "Elrand",
+  "description": "A mod with random things",
+  "version": "2.0",
+  "mcversion": "1.8.9",
+  "url": "elrand.elchris.tk",
+  "updateUrl": "",
+  "authorList": ["ELChris414"],
+  "credits": "All the tutorials out there!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
