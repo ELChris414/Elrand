@@ -5,6 +5,8 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -12,6 +14,7 @@ import com.elchris.elrand.Elrand;
 import com.elchris.elrand.Strings;
 import com.elchris.elrand.items.ElrandArmor;
 import com.elchris.elrand.items.ElrandAxe;
+import com.elchris.elrand.items.ElrandFood;
 import com.elchris.elrand.items.ElrandHoe;
 import com.elchris.elrand.items.ElrandMultiTool;
 import com.elchris.elrand.items.ElrandPickaxe;
@@ -61,6 +64,7 @@ public class ElrandItems {
 	public static Item elrand_chestplate;
 	public static Item elrand_leggings;
 	public static Item elrand_boots;
+	public static Item elrand_food;
 	
 	public static void init() {
 		elrand_item = new Item().setUnlocalizedName("elrand_item").setCreativeTab(Elrand.tabElrand);
@@ -98,6 +102,7 @@ public class ElrandItems {
 		elrand_chestplate = new Item().setUnlocalizedName("elrand_chestplate").setCreativeTab(Elrand.tabElrand);
 		elrand_leggings = new Item().setUnlocalizedName("elrand_leggings").setCreativeTab(Elrand.tabElrand);
 		elrand_boots = new Item().setUnlocalizedName("elrand_boots").setCreativeTab(Elrand.tabElrand);
+		elrand_food = new Item().setUnlocalizedName("elrand_food").setCreativeTab(Elrand.tabElrand);
 	}
 	
 	public static void register() {
@@ -135,7 +140,8 @@ public class ElrandItems {
 		GameRegistry.registerItem(elrand_helmet = new ElrandArmor("elrand_helmet", ELRANDARMOR, 1, 0), "elrand_helmet");
 		GameRegistry.registerItem(elrand_chestplate = new ElrandArmor("elrand_chestplate", ELRANDARMOR, 1, 1), "elrand_chestplate");
 		GameRegistry.registerItem(elrand_leggings = new ElrandArmor("elrand_leggings", ELRANDARMOR, 2, 2), "elrand_leggings");
-		GameRegistry.registerItem(elrand_boots = new ElrandArmor("elrand_boots", ELRANDARMOR, 1, 3), "elrand_boots");  
+		GameRegistry.registerItem(elrand_boots = new ElrandArmor("elrand_boots", ELRANDARMOR, 1, 3), "elrand_boots");
+		GameRegistry.registerItem(elrand_food = new ElrandFood("elrand_food", 2, 0.2f, false, new PotionEffect(Potion.moveSpeed.id, 1200, 1).setAlwaysEdible(), "elrand_food"));
 	}
 	
 	public static void registerRenders() {
@@ -174,6 +180,7 @@ public class ElrandItems {
 		registerRender(elrand_chestplate);
 		registerRender(elrand_leggings);
 		registerRender(elrand_boots);
+		registerRender(elrand_food);
 	}
 	
 	public static void registerRender(Item item) {
